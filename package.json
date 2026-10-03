@@ -1,0 +1,20 @@
+{
+  "name": "smartwaste",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"node server/index.js\" \"npm run dev --prefix client -- --port 3000\""
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "concurrently": "^10.0.5",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "node-cron": "^4.6.0",
+    "zod": "^4.6.5"
+  }
+}

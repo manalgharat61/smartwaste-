@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Database files (never commit the real DB)
+*.db
+*.db-shm
+*.db-wal
+server/smartwaste.db
+server/smartwaste_v2.db
+
+# Env files
+.env
+.env.local
+.env.production
+
+# Build output
+client/dist/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Patch scripts (temp)
+patch.js
+patch2.js
+
+# Smoke/test output
+smoke.js
+server/tests.js

@@ -1,0 +1,28 @@
+{
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "country": "India",
+  "center": { "lat": 19.0760, "lng": 72.8777 },
+  "zoom": 12,
+  "maxBounds": [[18.85, 72.70], [19.45, 73.15]],
+  "timezone": "Asia/Kolkata",
+  "locale": "en-IN",
+  "depot": { "lat": 19.0176, "lng": 72.8157, "name": "Worli Depot" },
+  "areas": [
+    { "name": "Andheri", "centroid": { "lat": 19.1136, "lng": 72.8697 } },
+    { "name": "Bandra", "centroid": { "lat": 19.0596, "lng": 72.8295 } },
+    { "name": "Dadar", "centroid": { "lat": 19.0178, "lng": 72.8478 } },
+    { "name": "Colaba", "centroid": { "lat": 18.9067, "lng": 72.8147 } },
+    { "name": "Borivali", "centroid": { "lat": 19.2307, "lng": 72.8567 } },
+    { "name": "Kurla", "centroid": { "lat": 19.0728, "lng": 72.8795 } },
+    { "name": "Powai", "centroid": { "lat": 19.1176, "lng": 72.9060 } },
+    { "name": "Chembur", "centroid": { "lat": 19.0522, "lng": 72.9005 } },
+    { "name": "Ghatkopar", "centroid": { "lat": 19.0856, "lng": 72.9080 } },
+    { "name": "Malad", "centroid": { "lat": 19.1800, "lng": 72.8412 } },
+    { "name": "Goregaon", "centroid": { "lat": 19.1663, "lng": 72.8526 } },
+    { "name": "Worli", "centroid": { "lat": 19.0176, "lng": 72.8157 } },
+    { "name": "Sion", "centroid": { "lat": 19.0390, "lng": 72.8619 } },
+    { "name": "Thane", "centroid": { "lat": 19.2183, "lng": 72.9781 } },
+    { "name": "Navi Mumbai", "centroid": { "lat": 19.0330, "lng": 73.0297 } }
+  ]
+}
