@@ -17,7 +17,7 @@ const { haversine, nearestArea } = require('./lib/geo');
 const REGION = require('../shared/region.json');
 
 const app = express();
-const DB_PATH = path.join(__dirname, 'smartwaste.db');
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'smartwaste.db');
 const db = new Database(DB_PATH);
 db.pragma('foreign_keys = ON');
 db.pragma('journal_mode = WAL');
@@ -665,6 +665,18 @@ app.get('/api/events', auth(), (req, res) => {
 });
 
 // ─── Error handler ────────────────────────────────────────────────────────────
+// --- Serve React App in Production ---
+const clientDist = path.join(__dirname, '..', 'client', 'dist');
+const fs = require('fs');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
+// --- Error Handler ---
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json({ error: 'Internal server error', details: err.message });

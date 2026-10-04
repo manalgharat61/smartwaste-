@@ -2,7 +2,9 @@
   "name": "smartwaste",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently \"node server/index.js\" \"npm run dev --prefix client -- --port 3000\""
+    "dev": "concurrently \"node server/index.js\" \"npm run dev --prefix client -- --port 3000\"",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "node server/index.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

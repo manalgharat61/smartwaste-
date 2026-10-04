@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: smartwaste
+    env: node
+    buildCommand: npm run build
+    startCommand: node server/deploy.js && node server/index.js
+    disk:
+      name: smartwaste-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_PATH
+        value: /data/smartwaste.db
